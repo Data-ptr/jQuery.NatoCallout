@@ -70,9 +70,13 @@ Tango
 
 We could also get fancy, and do things like insert the callout into an ordered or unordered list, or a table:
 
-```$('#element').NatoCallout({'decode': 'This is a test', 'prefix': '<li>', 'postfix': '</li>'});```
+```
+$('#element').NatoCallout({'decode': 'This is a test', 'prefix': '<li>', 'postfix': '</li>'});
+```
 
-```$('#element').NatoCallout({'decode': 'This is a test', 'prefix': '<tr><td>', 'postfix': '</td></tr>'});```
+```
+$('#element').NatoCallout({'decode': 'This is a test', 'prefix': '<tr><td>', 'postfix': '</td></tr>'});
+```
 
 If element "*element*" were an unordered list, with the first example the output would be:
 
