@@ -9,9 +9,12 @@
   $.fn.NatoCallout = function( options ) {  
 
     var settings = $.extend( {
-      'decode'  : 'NatoCallout',
-      'prefix'  : '',
-      'postfix' : ''
+      'decode'      : 'NatoCallout',
+      'prefix'      : ' ',
+      'postfix'     : '',
+      'includeCase' : false,
+      'upperOnly'   : true,
+      'shortCase'   : false
     }, options);
 
     var NC_table    =  {    'A': 'Alpha',
@@ -50,19 +53,40 @@
                             '7': 'Seven',
                             '8': 'Eight',
                             '9': 'Nine',
-                            '.': 'Point',
-                            '-': 'Dash',
-                            ' ': 'Space'
+                            '.': '-POINT-',
+                            '-': '-DASH-',
+                            ' ': '-SPACE-'
                         };
 
     return this.each(function() {
-
         for (var i = 0; i < settings.decode.length; i++) {
-            $(this).append(options.prefix + NC_table[settings.decode[i].toUpperCase()] + options.postfix);
+            var character       = settings.decode[i];
+            var characterCase   = undefined;
+            
+            if (settings.includeCase){
+                if (isNaN(character * 1)){
+                    if (character == character.toUpperCase()) {
+                        if (settings.shortCase){
+                            characterCase = 'Upper ';
+                        }else{
+                            characterCase = 'Uppercase ';
+                        }
+                    }else if (!settings.upperOnly){
+                        if (settings.shortCase){
+                            characterCase = 'Lower ';
+                        }else{
+                            characterCase = 'Lowercase ';
+                        }
+                    }
+                }
+            }
+            
+            $(this).append( settings.prefix +
+                            (characterCase ? characterCase : '') +
+                            NC_table[character.toUpperCase()] + 
+                            settings.postfix);
         };
-
     });
-
   };
 })( jQuery );
 
