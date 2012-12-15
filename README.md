@@ -1,7 +1,7 @@
 jQuery.NatoCallout
 ==============
 
-NATO Callout Decoder
+NATO Callout Decoder - jQuery plugin
 
 About
 --------
