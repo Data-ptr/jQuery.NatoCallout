@@ -7,6 +7,11 @@
 (function($){
     $.extend({
         NatoCallout : function(options){
+            if(typeof(options) == "string")
+            {
+                options = {'decode' : options};
+            }
+            
             var settings = $.extend( {
                 'decode'      : 'NatoCallout',
                 'prefix'      : ' ',

@@ -13,7 +13,12 @@ NATO Callout Decoder - jQuery plugin
 var decodeString = $.NatoCallout({'decode': 'This is a test'});
 ```
 
-Will set the variable "_decodeString_" to:
+### Shortcut:
+```
+var decodeString = $.NatoCallout('This is a test');
+```
+
+Will both set the variable _"decodeString"_ to:
 
 ```
 Tango Hotel India Sierra -SPACE- India Sierra -SPACE- Alpha -SPACE- Tango Echo Sierra Tango
@@ -24,7 +29,7 @@ Tango Hotel India Sierra -SPACE- India Sierra -SPACE- Alpha -SPACE- Tango Echo S
 $('#element').NatoCallout({'decode': 'This is a test'});
 ```
 
-Will append the following to the element "_element_":
+Will append the following to the element _"element"_:
 
 ```
 Tango Hotel India Sierra -SPACE- India Sierra -SPACE- Alpha -SPACE- Tango Echo Sierra Tango
