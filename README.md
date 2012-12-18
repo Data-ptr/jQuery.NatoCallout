@@ -1,28 +1,38 @@
-jQuery.NatoCallout
-==============
+# jQuery.NatoCallout
 
 NATO Callout Decoder - jQuery plugin
 
-About
---------
-<b>NatoCallout</b> takes a string (as the option "decode") and, using the *the NATO phonetic alphabet**, appends the corresponding callout for each character to the selected element(s). This is super useful to help users communicate things like registration codes to others verbally.
+## About
 
-Usage
------
+**NatoCallout** takes a string (as the option "decode") and, using the _the NATO phonetic alphabet_*, returns a string with the corresponding callout for each character of the "decode" string. Optionally it will append this string to the selected element(s). This is super useful to help users communicate things like registration codes to others verbally.
 
-<pre>
-$('#element').NatoCallout({'decode': 'This is a test'});
-</pre>
+## Usage
 
-Will append the following to the element "*element*":
-<pre>
+### String return:
+```
+var decodeString = $.NatoCallout({'decode': 'This is a test'});
+```
+
+Will set the variable "_decodeString_" to:
+
+```
 Tango Hotel India Sierra -SPACE- India Sierra -SPACE- Alpha -SPACE- Tango Echo Sierra Tango
-</pre>
+```
 
-Options
-------
+### Append to matching element(s):
+```
+$('#element').NatoCallout({'decode': 'This is a test'});
+```
 
-Below are the options which can be provided to <b>NatoCallout</b> along with their defaults:
+Will append the following to the element "_element_":
+
+```
+Tango Hotel India Sierra -SPACE- India Sierra -SPACE- Alpha -SPACE- Tango Echo Sierra Tango
+```
+
+## Options
+
+Below are the options which can be provided to **NatoCallout** along with their defaults:
 <pre>
 {
       'decode'      : 'NatoCallout',
@@ -34,17 +44,17 @@ Below are the options which can be provided to <b>NatoCallout</b> along with the
 }
 </pre>
 
-* <b>Decode:</b> the string to decode to *the NATO phonetic alphabet*
-* <b>Prefix:</b> the text and/or HTML to prepend to each decoded character (default is a *space*)
-* <b>Postfix:</b> the text and/or HTML to append to each decoded character
-* <b>Include Case:</b> whether or not to prepend the case of the decoded character to the decode
-* <b>Upper Only:</b> whether or not to prepend the case of the decoded character to the decode ONLY if it is uppercase (ignored if *includeCase* is false)
-* <b>Short Case:</b> whether or not to prepend the case of the decoded character to the decode using the corresponding "short" version (Uppercase = Upper, Lowercase = Lower) (ignored if *includeCase* is false)
+* **Decode:** the string to decode to *the NATO phonetic alphabet*
+* **Prefix:** the text and/or HTML to prepend to each decoded character (default is a *space*)
+* **Postfix:** the text and/or HTML to append to each decoded character
+* **Include Case:** whether or not to prepend the case of the decoded character to the decode
+* **Upper Only:** whether or not to prepend the case of the decoded character to the decode ONLY if it is uppercase (ignored if _includeCase_ is false)
+* **Short Case:** whether or not to prepend the case of the decoded character to the decode using the corresponding "short" version (Uppercase = Upper, Lowercase = Lower) (ignored if _includeCase_ is false)
 
-Options Usage
------
+## Options Usage
 
-If we wanted to make a simple list we could add a *postfix* of say, a line break:
+
+If we wanted to make a simple list we could add a _postfix_ of say, a line break:
 
 ```
 $('#element').NatoCallout({'decode': 'This is a test', 'postfix': '<br />'});
@@ -98,6 +108,6 @@ If element "*element*" were an unordered list, with the first example the output
 
 
 
-References
-----------------
+## References
+
 * http://en.wikipedia.org/wiki/NATO_phonetic_alphabet
