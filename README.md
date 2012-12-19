@@ -93,7 +93,7 @@ $('#element').NatoCallout({'decode': 'This is a test', 'prefix': '<li>', 'postfi
 $('#element').NatoCallout({'decode': 'This is a test', 'prefix': '<tr><td>', 'postfix': '</td></tr>'});
 ```
 
-If element "*element*" were an unordered list, with the first example the output would be:
+If element _"element"_ were an unordered list, with the first example the output would be:
 
 * Tango
 * Hotel
@@ -116,3 +116,5 @@ If element "*element*" were an unordered list, with the first example the output
 ## References
 
 * http://en.wikipedia.org/wiki/NATO_phonetic_alphabet
+
+[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/dcc1804bc895fe96c940d94618c08b4e "githalytics.com")](http://githalytics.com/Data-ptr/jQuery.NatoCallout)
